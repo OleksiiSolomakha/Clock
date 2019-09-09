@@ -3,10 +3,10 @@ const clock = document.querySelector('.clock');
 const time = () => {
   const now = new Date();
 
-  const date = now.toDateString();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
+  const date = dateFns.format(now, 'dddd Do MMMM YYYY');
+  const hours = dateFns.format(now, 'HH');
+  const minutes = dateFns.format(now, 'mm');
+  const seconds = dateFns.format(now, 'ss');
 
   const html = `
   <div>${date}</div>
